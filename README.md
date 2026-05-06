@@ -4,27 +4,35 @@ A beginner-friendly implementation of a **Simple Reflex AI Agent** using Python.
 
 ---
 
-## 🧠 What is a Simple Reflex Agent?
+# 🧠 What is a Simple Reflex Agent?
 
-A Simple Reflex Agent makes decisions based **only on current input**, using predefined rules.
+A Simple Reflex Agent makes decisions based only on the **current input**.
 
-> 🧩 No memory
-> 🧩 No learning
-> 🧩 No planning
+It does **NOT**:
+
+* remember past inputs ❌
+* learn from experience ❌
+* plan future actions ❌
+
+It simply follows predefined rules.
 
 ---
 
-## 🏗️ Architecture
+# 🏗️ Architecture
 
-```
+```text
         +------------------+
         |   User Input     |
         +--------+---------+
                  |
                  v
         +------------------+
+        |  Input Cleaner   |
+        +--------+---------+
+                 |
+                 v
+        +------------------+
         |  Rule Matching   |
-        | (IF conditions)  |
         +--------+---------+
                  |
                  v
@@ -35,75 +43,120 @@ A Simple Reflex Agent makes decisions based **only on current input**, using pre
 
 ---
 
-## 🔄 Agent Flow
+# 🔄 Agent Flow
 
-```
-Input → Process (Rules) → Output
+```text
+User → main.py → agent.py → processor.py → rules.py → Response
 ```
 
 ---
 
-## ⚙️ Features
+# 📂 Project Structure
 
-* Input normalization (lowercase, trim)
-* Keyword-based matching
-* Rule-based decision system
-* Beginner-friendly structure
-
----
-
-## 📂 Project Structure
-
-```
+```text
 simple-reflex-agent/
 │
-├── simple_reflex_agent.py
+├── agent/
+│   ├── rules.py
+│   ├── processor.py
+│   └── agent.py
+│
+├── main.py
 ├── README.md
 └── .gitignore
 ```
 
 ---
 
-## 🚀 How to Run
+# ⚙️ Features
+
+✅ Rule-based responses
+✅ Input cleaning
+✅ Keyword matching
+✅ Modular architecture
+✅ Beginner-friendly project structure
+
+---
+
+# 🚀 How to Run
+
+## 1️⃣ Create Virtual Environment
 
 ```bash
-python simple_reflex_agent.py
+python -m venv venv
+```
+
+## 2️⃣ Activate Environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+## 3️⃣ Run Agent
+
+```bash
+python main.py
 ```
 
 ---
 
-## 🧪 Example
+# 🧪 Example
 
+```text
+You: hi
+Agent: Hello!
+
+You: how are you
+Agent: I am fine!
+
+You: bye
+Agent: Goodbye!
 ```
-Input: hi
-Output: Hello!
 
-Input: how are you
-Output: I am fine!
+---
+
+# ⚠️ Limitations
+
+* No memory
+* No learning
+* No reasoning
+* Only reacts to current input
+
+---
+
+# 🎯 Learning Goal
+
+This project helps understand the foundation of all AI agents:
+
+```text
+Input → Decision → Action
 ```
 
 ---
 
-## ⚠️ Limitations
+# 🚀 Future Improvements
 
-* Cannot remember past inputs
-* Cannot learn new behavior
-* Works only on predefined rules
-
----
-
-## 🎯 Learning Goal
-
-This project helps understand the **foundation of all AI agents**:
-
-> Input → Decision → Action
+* Add memory
+* Add planning
+* Add learning
+* Add reasoning
 
 ---
 
-## 🛠️ Future Improvements
+# 📚 Concepts Learned
 
-* Add memory (Model-Based Agent)
-* Add planning (Goal-Based Agent)
-* Add learning (Learning Agent)
+* Rule-based systems
+* Input processing
+* Decision making
+* Modular architecture
+* Git & GitHub workflow
 
 ---
